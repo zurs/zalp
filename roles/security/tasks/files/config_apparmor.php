@@ -41,5 +41,5 @@ foreach ($extContent as &$line) {
 
 $newExtFileContent = implode("\n", $newExtFileContent);
 
-print $newExtFileContent;
+file_put_contents($EXTLINUX_PATH, $newExtFileContent);
 

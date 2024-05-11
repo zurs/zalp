@@ -7,3 +7,24 @@
       - mesa-dri-gallium
       - mesa-va-gallium
       - intel-media-driver
+      - iwd
+      - openresolv
+
+  - name: Insert iwd default config
+    copy:
+      src: iwd.main.conf
+      dest: /etc/iwd/main.conf
+  - name: Start and enable iwd
+    service:
+      name: iwd
+      state: running
+      enabled: true
+
+  - name: Remove pulseaudio
+    apk:
+      name: pulseaudio
+      state: absent
+  - name: Install pipewire 
+    apk:
+      name: pipewire wireplumber pipewire-pulse xfce4-pulseaudio-plugin pavucontrol
+      state: present

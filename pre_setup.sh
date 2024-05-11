@@ -9,7 +9,7 @@ echo "http://mirror.bahnhof.net/pub/alpinelinux/edge/testing" >> /etc/apk/reposi
 apk update
 apk upgrade
 
-apk add ansible
+apk add ansible sshpass
 
 echo "Please reboot your machine now."
 

@@ -1,0 +1,9 @@
+- name: Install dev packages
+    apk:
+      name: "{{ item }}"
+      present: true
+    loop:
+      - go
+      - neovim
+      - git
+      - code-oss

@@ -1,0 +1,6 @@
+---
+  - name: Install rust uutils
+    hosts: me
+    roles:
+      - uutils
+  

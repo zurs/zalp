@@ -1,2 +1,2 @@
 [me]
-local ansible_host=localhost ansible_pass=yoursecretpass ansible_connection=local
+local ansible_host=localhost

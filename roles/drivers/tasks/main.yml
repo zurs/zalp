@@ -1,0 +1,9 @@
+---
+  - name: Install drivers for Intel graphics
+    apk:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - mesa-dri-gallium
+      - mesa-va-gallium
+      - intel-media-driver

@@ -5,6 +5,3 @@
       state: present
     loop: 
       - gnome-mines
-      - mesa-dri-gallium
-      - mesa-va-gallium
-      - intel-media-driver

@@ -45,7 +45,6 @@
       - hashsum
       - head
       - hostid
-      - hostname
       - id
       - install
       - join

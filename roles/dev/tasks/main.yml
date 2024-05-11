@@ -1,4 +1,5 @@
-- name: Install dev packages
+---
+  - name: Install dev packages
     apk:
       name: "{{ item }}"
       present: true

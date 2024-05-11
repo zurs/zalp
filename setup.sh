@@ -1,13 +1,15 @@
 #!/bin/sh
 
-doas echo "http://mirror.bahnhof.net/pub/alpinelinux/edge/main" > /etc/apk/repositories
-doas echo "http://mirror.bahnhof.net/pub/alpinelinux/edge/community" >> /etc/apk/repositories
-doas echo "http://mirror.bahnhof.net/pub/alpinelinux/edge/testing" >> /etc/apk/repositories
+# Run this with doas
 
-doas apk update
-doas apk upgrade
+echo "http://mirror.bahnhof.net/pub/alpinelinux/edge/main" > /etc/apk/repositories
+echo "http://mirror.bahnhof.net/pub/alpinelinux/edge/community" >> /etc/apk/repositories
+echo "http://mirror.bahnhof.net/pub/alpinelinux/edge/testing" >> /etc/apk/repositories
 
-doas apk add ansible
+apk update
+apk upgrade
+
+apk add ansible
 
 echo "Please reboot your machine now."
 

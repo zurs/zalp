@@ -17,5 +17,5 @@
       rc-service cgroups start
       modprobe tun
       echo tun >>/etc/modules
-      echo {{ ansible_user_id }}:100000:65536 >/etc/subuid
-      echo {{ ansible_user_id }}:100000:65536 >/etc/subgid
+      echo {{ USERNAME }}:100000:65536 >/etc/subuid
+      echo {{ USERNAME }}:100000:65536 >/etc/subgid

@@ -45,6 +45,7 @@
       - hashsum
       - head
       - hostid
+      #- hostname # Don't change this!
       - id
       - install
       - join

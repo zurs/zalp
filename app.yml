@@ -9,4 +9,6 @@
       - security
       - drivers
     become: true
+    vars_files:
+      - vars.yml
   

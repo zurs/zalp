@@ -2,7 +2,7 @@
   - name: Install dev packages
     apk:
       name: "{{ item }}"
-      present: true
+      state: present
     become: true
     loop:
       - go

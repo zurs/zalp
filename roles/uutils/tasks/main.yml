@@ -2,7 +2,7 @@
   - name: Install uutils
     apk:
       name: uutils-coreutils
-      present: true
+      state: present
     become: true
   - name: Linking all execs to default to uutils
     file:

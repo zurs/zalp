@@ -1,6 +1,6 @@
 ---
   - name: Install rust uutils
-    hosts: localhost
+    hosts: me
     roles:
       - uutils
       - dev

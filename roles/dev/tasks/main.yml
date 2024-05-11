@@ -3,7 +3,6 @@
     apk:
       name: "{{ item }}"
       state: present
-    become: true
     loop:
       - go
       - neovim

@@ -19,3 +19,10 @@
       echo tun >>/etc/modules
       echo {{ USERNAME }}:100000:65536 >/etc/subuid
       echo {{ USERNAME }}:100000:65536 >/etc/subgid
+  
+  - name: Insert settings.json into Code config folder
+    copy:
+      src: code.settings.json
+      dest: "/home/{{ USERNAME }}/.config/Code\ -\ OSS/User/settings.json"
+      group: "{{ USERNAME }}"
+      owner: "{{ USERNAME }}"

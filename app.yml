@@ -6,6 +6,4 @@
       - dev
     become: true
     become_method: doas
-    vars_files:
-      - secrets
   

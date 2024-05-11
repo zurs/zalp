@@ -1,6 +1,9 @@
 ---
   - name: Install rust uutils
-    hosts: me
+    hosts: localhost
     roles:
       - uutils
+      - dev
+    become: true
+    become_method: doas
   

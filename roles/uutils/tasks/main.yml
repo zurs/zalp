@@ -3,13 +3,11 @@
     apk:
       name: uutils-coreutils
       state: present
-    become: true
   - name: Linking all execs to default to uutils
     file:
       src: "/usr/bin/uutils-{{ item }}"
       dest: "/bin/{{ item }}"
       state: link
-    become: true
     loop:
       - arch
       - b2sum

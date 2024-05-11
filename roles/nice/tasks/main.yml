@@ -1,0 +1,7 @@
+---
+  - name: Install some nice packages
+    apk:
+      name: "{{ item }}"
+      state: present
+    loop: 
+      - gnome-mines

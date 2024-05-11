@@ -1,0 +1,7 @@
+---
+  - name: Install flatpak
+    apk:
+      name: flatpak
+      state: present
+  - name: Setup flathub repository
+    shell: flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

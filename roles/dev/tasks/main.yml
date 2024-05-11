@@ -9,3 +9,13 @@
       - git
       - code-oss
       - php
+      - podman
+      - podman-compose
+  - name: Configure podman
+    shell: |
+      rc-update add cgroups
+      rc-service cgroups start
+      modprobe tun
+      echo tun >>/etc/modules
+      echo {{ ansible_user_id }}:100000:65536 >/etc/subuid
+      echo {{ ansible_user_id }}:100000:65536 >/etc/subgid

@@ -4,5 +4,8 @@
     roles:
       - uutils
       - dev
+      - flatpak
+      - nice
+      - security
     become: true
   

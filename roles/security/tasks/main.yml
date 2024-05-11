@@ -1,0 +1,13 @@
+---
+  - name: Install AppArmor
+    apk:
+      name: apparmor apparmor-utils apparmor-profiles php
+  - name: Config AppArmor script
+    script:
+      cmd: config_apparmor.php
+      executable: php
+  - name: Start AppArmor
+    service:
+      name: apparmor
+      enabled: true
+      state: started
